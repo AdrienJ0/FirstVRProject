@@ -370,8 +370,6 @@ GameObject:
   - component: {fileID: 814198197}
   - component: {fileID: 814198196}
   - component: {fileID: 814198195}
-  - component: {fileID: 814198200}
-  - component: {fileID: 814198199}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -869,36 +867,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
---- !u!54 &814198199
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814198193}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!136 &814198200
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814198193}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.05
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &868937066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba42dc1c49de2f442bb467e530468f2b, type: 3}
@@ -2865,8 +2833,6 @@ GameObject:
   - component: {fileID: 2066834055}
   - component: {fileID: 2066834054}
   - component: {fileID: 2066834053}
-  - component: {fileID: 2066834058}
-  - component: {fileID: 2066834057}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -3365,6 +3331,7 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &3903861402604058047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3454,6 +3421,8 @@ CapsuleCollider:
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 >>>>>>> 8d8c19a091c06889bfd9873540dad78cf93f8b3d
+=======
+>>>>>>> parent of 8d8c19a (Update)
 --- !u!1001 &6169362947694530751
 PrefabInstance:
   m_ObjectHideFlags: 0
