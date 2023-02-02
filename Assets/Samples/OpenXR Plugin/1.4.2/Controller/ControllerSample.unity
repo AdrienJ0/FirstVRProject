@@ -3330,8 +3330,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
-<<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &3903861402604058047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3389,7 +3387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ecf558f4149d9643ae3f6598e53b184, type: 3}
-=======
+
 --- !u!54 &2066834057
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3420,9 +3418,6 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
->>>>>>> 8d8c19a091c06889bfd9873540dad78cf93f8b3d
-=======
->>>>>>> parent of 8d8c19a (Update)
 --- !u!1001 &6169362947694530751
 PrefabInstance:
   m_ObjectHideFlags: 0
