@@ -123,6 +123,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &152464868 stripped
+=======
 --- !u!1001 &361765026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,6 +184,7 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fde0b123591a1294cb4f46d7bd49ea28, type: 3}
 --- !u!1 &499582466 stripped
+>>>>>>> Adrien
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5561861260326248558, guid: c4a2503e3bec68c498f6918d2c741b9d, type: 3}
   m_PrefabInstance: {fileID: 2305163665375714732}
@@ -2210,7 +2214,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
+    - target: {fileID: 668330385, guid: fde0b123591a1294cb4f46d7bd49ea28, type: 3}
+      propertyPath: m_Spring
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769459383094025542, guid: fde0b123591a1294cb4f46d7bd49ea28, type: 3}
+=======
     - target: {fileID: 4031376715959380396, guid: 91eee3c438d789d4f9010b1159a5faf7, type: 3}
+>>>>>>> Adrien
       propertyPath: m_Name
       value: WhiteBall
       objectReference: {fileID: 0}
@@ -2218,13 +2230,21 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+    - target: {fileID: 3252944793986222076, guid: fde0b123591a1294cb4f46d7bd49ea28, type: 3}
+=======
     - target: {fileID: 4031376715959380401, guid: 91eee3c438d789d4f9010b1159a5faf7, type: 3}
+>>>>>>> Adrien
       propertyPath: m_LocalPosition.x
       value: -1.12
       objectReference: {fileID: 0}
     - target: {fileID: 4031376715959380401, guid: 91eee3c438d789d4f9010b1159a5faf7, type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
+      value: 0.724
+=======
       value: 0.84
+>>>>>>> Adrien
       objectReference: {fileID: 0}
     - target: {fileID: 4031376715959380401, guid: 91eee3c438d789d4f9010b1159a5faf7, type: 3}
       propertyPath: m_LocalPosition.z
