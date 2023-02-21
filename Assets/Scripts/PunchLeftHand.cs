@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.OpenXR.Input;
+using UnityEngine.InputSystem;
 
-public class PunchHand : MonoBehaviour
+public class PunchLeftHand : MonoBehaviour
 {
 
     //public XRController hand; //type XR à modifier
     private Rigidbody rBody;
+    [SerializeField] InputActionReference leftHapticAction;
+    private float amplitude;
+    private float duration;
 
     // Start is called before the first frame update
     void Start()
@@ -42,16 +46,9 @@ public class PunchHand : MonoBehaviour
         Vector3 dir = (avgPoint - rBody.transform.position).normalized;
         collisionR.AddForceAtPosition(dir * 10f * rBody.velocity.magnitude, avgPoint);
 
-        StartCoroutine(LongVibration(.1f, .2f));
+        OpenXRInput.SendHapticImpulse(leftHapticAction, amplitude, duration, UnityEngine.InputSystem.XR.XRController.leftHand); //Left Hand Haptic Impulse
 
     }
 
-    IEnumerator LongVibration(float length, float strength)
-    {
-        for(float i = 0; i < length;  i+= Time.deltaTime)
-        {
-            //OpenXRInput.SendHapticImpulse(hapticAction.action, _amplitude, _frequency, _duration, control.device);
-            yield return null;
-        }
-    }
+
 }

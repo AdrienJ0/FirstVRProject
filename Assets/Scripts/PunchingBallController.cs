@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PunchingBallController : MonoBehaviour
 {
+    //private Rigidbody cibleRigidbody;
+    [SerializeField] private Transform punchingBallTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +22,18 @@ public class PunchingBallController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Hit Punching Bag!");
-        Rigidbody collisionR = collision.gameObject.GetComponentInChildren<Rigidbody>();
         if (collision == null)
             return;
+
+    //    if (other.gameObject.layer == ballLayer)
+        //{
+            //GetComponent<AudioSource>().PlayOneShot(sonKill);
+            //Instantiate(killEffect, punchingBallTransform.position, killEffect.transform.rotation); //Génère des particules de sang
+            
+
+            //Player.addNbPoints(5);
+            //Debug.Log("Bien joué! +5 points!");
+            //Debug.Log(Player.getNbPoints());
+    //    }
     }
 }
