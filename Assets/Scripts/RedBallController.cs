@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class RedBallController : MonoBehaviour
 {
-    private Rigidbody cibleRigidbody;
-    [SerializeField] private Transform cibleTransform;
+   // private Rigidbody cibleRigidbody;
+    //[SerializeField] private Transform cibleTransform;
+    private static LayerMask gloveLayer;
     // Start is called before the first frame update
 
-    private void OnCollisionEnter(Collision other)
+    private void Awake()
     {
-        //if (other.gameObject.layer == ballLayer)
-        //{
-        //GetComponent<AudioSource>().PlayOneShot(sonKill);
-        //Instantiate(killEffect, cibleTransform.position, killEffect.transform.rotation); //Génère des particules de sang
-        //Destroy(gameObject);
+        gloveLayer = LayerMask.NameToLayer("Glove");
+    }
 
-        //Player.removeHeart();
-        //Debug.Log("Bien joué! +5 points!");
-        //Debug.Log(Player.getNbPoints());
-        //}
-
-        Destroy(gameObject);
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == gloveLayer)
+        {
+            Debug.Log("Miss");
+            Destroy(gameObject);
+            if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
+            {
+                PlayerInfos.removeOneHeart();
+                PlayerInfos.incrementNbMiss();
+                if (PlayerInfos.getNbHearts() == 1)
+                {
+                    Debug.Log("Game Over!");
+                }
+            }
+            //GetComponent<AudioSource>().PlayOneShot(sonKill);
+            //Instantiate(killEffect, cibleTransform.position, killEffect.transform.rotation); //Génère des particules de sang
+        }
     }
 }

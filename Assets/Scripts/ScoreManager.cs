@@ -10,11 +10,13 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GestionTexte();
+        GestionScore();
     }
 
-    public void GestionTexte()
+    public void GestionScore()
     {
         textComponent.text = "" + PlayerInfos.getNbPoints();
     }
+
+    
 }

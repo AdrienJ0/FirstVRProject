@@ -5,22 +5,26 @@ using UnityEngine;
 public class WhiteBallController : MonoBehaviour
 {
     private Rigidbody cibleRigidbody;
-    [SerializeField] private Transform cibleTransform;
+    //[SerializeField] private Transform cibleTransform;
+    private static LayerMask gloveLayer;
     // Start is called before the first frame update
 
-    private void OnCollisionEnter(Collision other)
+    private void Awake()
     {
-        //if (other.gameObject.layer == ballLayer)
-        //{
+        gloveLayer = LayerMask.NameToLayer("Glove");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == gloveLayer)
+        {
+            Destroy(gameObject);
+            PlayerInfos.addNbPoints(5);
+            Debug.Log("Hit white ball");
             //GetComponent<AudioSource>().PlayOneShot(sonKill);
             //Instantiate(killEffect, cibleTransform.position, killEffect.transform.rotation); //Génère des particules de sang
-            //Destroy(gameObject);
+        }
 
-        //Player.addNbPoints(5);
-        //Debug.Log("Bien joué! +5 points!");
-        //Debug.Log(Player.getNbPoints());
-        //}
-        Destroy(gameObject);
 
     }
 }

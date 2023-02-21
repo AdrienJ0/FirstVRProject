@@ -5,7 +5,13 @@ using UnityEngine;
 public class PunchingBallController : MonoBehaviour
 {
     //private Rigidbody cibleRigidbody;
-    [SerializeField] private Transform punchingBallTransform;
+    //[SerializeField] private Transform punchingBallTransform;
+    private static LayerMask gloveLayer;
+
+    private void Awake()
+    {
+        gloveLayer = LayerMask.NameToLayer("Glove");
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -21,19 +27,16 @@ public class PunchingBallController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hit Punching Bag!");
-        if (collision == null)
+        //Debug.Log("Hit Punching Bag!");
+        if (collision.gameObject.layer != gloveLayer)
             return;
 
-    //    if (other.gameObject.layer == ballLayer)
-        //{
+        if (collision.gameObject.layer == gloveLayer)
+        {
+            PlayerInfos.addNbPoints(100);
+            Debug.Log("Hit punching ball");
             //GetComponent<AudioSource>().PlayOneShot(sonKill);
-            //Instantiate(killEffect, punchingBallTransform.position, killEffect.transform.rotation); //Génère des particules de sang
-            
-
-            //Player.addNbPoints(5);
-            //Debug.Log("Bien joué! +5 points!");
-            //Debug.Log(Player.getNbPoints());
-    //    }
+            //Instantiate(killEffect, cibleTransform.position, killEffect.transform.rotation); //Génère des particules de sang
+        }
     }
 }

@@ -8,10 +8,10 @@ public class SpawnBall : MonoBehaviour
     public GameObject[] balls;
     public Image[] hearts;
     public Sprite emptyHeart;
-    private float spawnSpeed = 1.5f;
+    private float spawnSpeed = 3f;
     private float speedLimit = 0.8f;
-    private float speedDecrement = 0.01f;
-    private int nbMiss = 0;
+    private float speedDecrement = 0.05f;
+    //private int nbMiss = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class SpawnBall : MonoBehaviour
         while (true)
         {
             GameObject ball = Instantiate(balls[Random.Range(0, balls.Length)]);
-            float angle = Random.Range(20f, 160f);
+            float angle = Random.Range(60f, 120f);
             float radius = 1f;
             ball.transform.position = new Vector3(Mathf.Cos(angle),
                 Random.Range(1.4f,2f),
@@ -33,33 +33,24 @@ public class SpawnBall : MonoBehaviour
                 spawnSpeed -= speedDecrement;
 
             yield return new WaitForSeconds(spawnSpeed);
+
             if(ball != null)
             {
+                Debug.Log("Miss");
+                //Debug.Log(PlayerInfos.getNbMiss());
                 Destroy(ball);
-                Debug.Log("Raté");
                 Debug.Log(PlayerInfos.getNbHearts());
 
-                if (PlayerInfos.getNbHearts() > 1)
+                if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
                 {
-                    hearts[nbMiss].sprite = emptyHeart;
                     PlayerInfos.removeOneHeart();
-                    nbMiss++;
-                }
-                else if(PlayerInfos.getNbHearts() == 1)
-                {
-                    hearts[nbMiss].sprite = emptyHeart;
-                    PlayerInfos.removeOneHeart();
-                    Debug.Log("Game Over!");
-                    nbMiss++;
+                    PlayerInfos.incrementNbMiss();
+                    if (PlayerInfos.getNbHearts() == 1)
+                    {
+                        Debug.Log("Game Over!");
+                    }
                 }
             }
-
-            if(ball == null)
-            {
-                Debug.Log("Réussi");
-                PlayerInfos.addNbPoints(5);
-            }
-            
             //Debug.Log(spawnSpeed);
         }
     }

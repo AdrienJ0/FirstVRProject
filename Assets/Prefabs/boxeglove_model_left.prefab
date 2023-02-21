@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3590727103790699593}
   - component: {fileID: 5467625137086440719}
   - component: {fileID: 4833760094972285694}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: g_RetopoGroup2_RetopoGroup2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4392760137535583932}
   - component: {fileID: 7714914277390195605}
   - component: {fileID: 6524526367637904050}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: g_RetopoGroup1_RetopoGroup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,8 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5312046912770424764}
   - component: {fileID: 5634733177353719382}
-  - component: {fileID: 5634733177353719401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: boxeglove_model_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,19 +214,3 @@ CapsuleCollider:
   m_Height: 2.04
   m_Direction: 1
   m_Center: {x: 0, y: -0.36, z: 0}
---- !u!54 &5634733177353719401
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4824479079154869510}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

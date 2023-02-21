@@ -6,6 +6,7 @@ public class PlayerInfos : MonoBehaviour
 {
     private static int nbPoints = 0;
     private static int nbHearts = 3;
+    private static int nbMiss = 0;
 
     public static int getNbPoints()
     {
@@ -35,5 +36,15 @@ public class PlayerInfos : MonoBehaviour
     public static void removeOneHeart()
     {
         nbHearts -= 1;
+    }
+
+    public static int getNbMiss()
+    {
+        return nbMiss;
+    }
+
+    public static void incrementNbMiss()
+    {
+        nbMiss += 1;
     }
 }
