@@ -11,6 +11,7 @@ public class SpawnBall : MonoBehaviour
     private float spawnSpeed = 3f;
     private float speedLimit = 0.8f;
     private float speedDecrement = 0.05f;
+    private int random;
     //private int nbMiss = 0;
 
     // Start is called before the first frame update
@@ -23,34 +24,59 @@ public class SpawnBall : MonoBehaviour
     {
         while (true)
         {
-            GameObject ball = Instantiate(balls[Random.Range(0, balls.Length)]);
-            float angle = Random.Range(60f, 120f);
-            float radius = 1f;
-            ball.transform.position = new Vector3(Mathf.Cos(angle),
-                Random.Range(1.4f,2f),
-                radius);
-            if (spawnSpeed >  speedLimit)
-                spawnSpeed -= speedDecrement;
-
-            yield return new WaitForSeconds(spawnSpeed);
-
-            if(ball != null)
+            random = Random.Range(0, balls.Length);
+            if(random == 0)
             {
-                Debug.Log("Miss");
-                //Debug.Log(PlayerInfos.getNbMiss());
-                Destroy(ball);
-                Debug.Log(PlayerInfos.getNbHearts());
+                GameObject ballWhite = Instantiate(balls[0]);
+                float angle = Random.Range(60f, 120f);
+                float radius = 1f;
+                ballWhite.transform.position = new Vector3(Mathf.Cos(angle),
+                    Random.Range(1.4f, 2f),
+                    radius);
+                if (spawnSpeed > speedLimit)
+                    spawnSpeed -= speedDecrement;
 
-                if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
+                yield return new WaitForSeconds(spawnSpeed);
+
+                if (ballWhite != null)
                 {
-                    PlayerInfos.removeOneHeart();
-                    PlayerInfos.incrementNbMiss();
-                    if (PlayerInfos.getNbHearts() == 1)
+                    Debug.Log("Miss");
+                    //Debug.Log(PlayerInfos.getNbMiss());
+                    Destroy(ballWhite);
+                    Debug.Log(PlayerInfos.getNbHearts());
+
+                    if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
                     {
-                        Debug.Log("Game Over!");
+                        PlayerInfos.removeOneHeart();
+                        PlayerInfos.incrementNbMiss();
+                        if (PlayerInfos.getNbHearts() == 1)
+                        {
+                            Debug.Log("Game Over!");
+                        }
                     }
                 }
             }
+            else if(random == 1)
+            {
+                GameObject ballRed = Instantiate(balls[1]);
+                float angle = Random.Range(60f, 120f);
+                float radius = 1f;
+                ballRed.transform.position = new Vector3(Mathf.Cos(angle),
+                    Random.Range(1.4f, 2f),
+                    radius);
+                if (spawnSpeed > speedLimit)
+                    spawnSpeed -= speedDecrement;
+
+                yield return new WaitForSeconds(spawnSpeed);
+                if (ballRed != null)
+                {
+                    Destroy(ballRed);
+                }
+            }
+            
+            
+
+            
             //Debug.Log(spawnSpeed);
         }
     }
