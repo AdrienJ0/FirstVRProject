@@ -44,36 +44,30 @@ public class PunchRightHand : MonoBehaviour
             //Debug.Log("Hit nothing");
             return;
         }
-            
 
-        //if (collision.gameObject.layer == whiteBallLayer)
-        //{
-        //    Debug.Log("Hit white ball");
-        //    Destroy(collision.gameObject);
-        //    PlayerInfos.addNbPoints(5);
-        //    OpenXRInput.SendHapticImpulse(rightHapticAction, amplitude, duration, UnityEngine.InputSystem.XR.XRController.rightHand); //Right Hand Haptic Impulse
-        //}
+        if (collision.gameObject.layer == whiteBallLayer)
+        {
+            Debug.Log("Hit white ball");
+            Destroy(collision.gameObject);
+            PlayerInfos.addNbPoints(5);
+            OpenXRInput.SendHapticImpulse(rightHapticAction, amplitude, duration, UnityEngine.InputSystem.XR.XRController.rightHand); //Right Hand Haptic Impulse
+        }
 
-        //if (collision.gameObject.layer == redBallLayer)
-        //{
-        //    Debug.Log("Miss");
-        //    Destroy(collision.gameObject);
-        //    if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
-        //    {
-        //        PlayerInfos.removeOneHeart();
-        //        PlayerInfos.incrementNbMiss();
-        //        if (PlayerInfos.getNbHearts() == 1)
-        //        {
-        //            Debug.Log("Game Over!");
-        //        }
-        //    }
-        //    OpenXRInput.SendHapticImpulse(rightHapticAction, amplitude, duration, UnityEngine.InputSystem.XR.XRController.rightHand); //Right Hand Haptic Impulse
-        //}
-
-        //else
-        //{
-        //    return;
-        //}
+        if (collision.gameObject.layer == redBallLayer)
+        {
+            Debug.Log("Miss");
+            Destroy(collision.gameObject);
+            if (PlayerInfos.getNbHearts() >= 1 && PlayerInfos.getNbMiss() < 3)
+            {
+                PlayerInfos.removeOneHeart();
+                PlayerInfos.incrementNbMiss();
+                if (PlayerInfos.getNbHearts() == 1)
+                {
+                    Debug.Log("Game Over!");
+                }
+            }
+            OpenXRInput.SendHapticImpulse(rightHapticAction, amplitude, duration, UnityEngine.InputSystem.XR.XRController.rightHand); //Right Hand Haptic Impulse
+        }
 
         //Rigidbody collisionR = collision.gameObject.GetComponent<Rigidbody>();
 
