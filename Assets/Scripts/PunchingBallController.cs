@@ -29,7 +29,11 @@ public class PunchingBallController : MonoBehaviour
     {
         //Debug.Log("Hit Punching Bag!");
         if (collision.gameObject.layer != gloveLayer)
+        {
+            Debug.Log("No Hit punching ball");
             return;
+        }
+            
 
         if (collision.gameObject.layer == gloveLayer)
         {

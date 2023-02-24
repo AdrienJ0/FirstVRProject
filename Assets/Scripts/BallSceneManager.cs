@@ -19,15 +19,23 @@ public class BallSceneManager : MonoBehaviour
     {
         if(PlayerInfos.getNbHearts() == 0)
         {
-            StartCoroutine(ShowGameOver());
+            ShowGameOver();
+            //yield return new WaitForSeconds(2f);
+            ShowEndScore();
         }
     }
 
-    IEnumerator ShowGameOver()
+    void ShowGameOver()
     {
         scoreCanvas.SetActive(false);
         gameOverPanel.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        Time.timeScale = 0;
+        //yield return new WaitForSeconds(2f);
+    }
+
+    void ShowEndScore()
+    {
+        Time.timeScale = 0;
         gameOverPanel.SetActive(false);
         endScorePanel.SetActive(true);
     }

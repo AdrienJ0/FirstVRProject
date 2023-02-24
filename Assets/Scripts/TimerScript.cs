@@ -11,7 +11,11 @@ public class TimerScript : MonoBehaviour
     private float timeMax = 30;
     public float TimerInterval;
     private float tick;
-    [SerializeField] private TextMeshProUGUI textComponent;
+    [SerializeField] private TextMeshProUGUI timerText;
+
+    public GameObject scoreCanvas;
+    public GameObject timeOverPanel;
+    public GameObject endScorePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,34 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textComponent.text = string.Format("{0:0.00}", timeMax-time);
-        time = (float )Time.time;
+        time = (float)Time.time;
+        if (timeMax - time > 0)
+        {
+            timerText.text = string.Format("{0:0.00}", timeMax - time);
+            
+        }
+        if(timeMax - time <= 0)
+        {
+            timerText.text = "0.00";
+            ShowTimeOut();
+            ShowEndScore();
+        }
+
+        
+    }
+
+    void ShowTimeOut()
+    {
+        scoreCanvas.SetActive(false);
+        timeOverPanel.SetActive(true);
+        Time.timeScale = 0;
+        //yield return new WaitForSeconds(2f);
+    }
+
+    void ShowEndScore()
+    {
+        Time.timeScale = 0;
+        timeOverPanel.SetActive(false);
+        endScorePanel.SetActive(true);
     }
 }
