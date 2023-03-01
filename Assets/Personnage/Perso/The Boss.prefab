@@ -3751,6 +3751,7 @@ GameObject:
   - component: {fileID: 2955204088579039191}
   - component: {fileID: 8676303290072348338}
   - component: {fileID: 8676303290072348339}
+  - component: {fileID: 5051388946542975877}
   m_Layer: 0
   m_Name: The Boss
   m_TagString: Untagged
@@ -3765,8 +3766,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8406252438839140119}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7182546, y: -0.049999952, z: 0.12413645}
+  m_LocalRotation: {x: -0, y: 0.999599, z: -0, w: -0.028316867}
+  m_LocalPosition: {x: -1.6871693, y: -0.049999952, z: 0.12325567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3774,7 +3775,7 @@ Transform:
   - {fileID: 935882297131408590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 183.245, z: 0}
 --- !u!95 &2955204088579039191
 Animator:
   serializedVersion: 5
@@ -3785,7 +3786,7 @@ Animator:
   m_GameObject: {fileID: 8406252438839140119}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7f04be3da896fd942a89bdbb732bf915, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9235b59f37facc44894eccfb23205b02, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3822,8 +3823,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6738205, y: 2.624584, z: 1}
-  m_Center: {x: 0.053215265, y: 0.812292, z: 0}
+  m_Size: {x: 2.0504222, y: 2.2479825, z: 1}
+  m_Center: {x: 0.015555143, y: 1.0005927, z: 0}
+--- !u!114 &5051388946542975877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406252438839140119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918c9bd32da8066468ffce40a2363931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gantdes: {fileID: 8406252438839140119}
 --- !u!1 &8504490608229976883
 GameObject:
   m_ObjectHideFlags: 0

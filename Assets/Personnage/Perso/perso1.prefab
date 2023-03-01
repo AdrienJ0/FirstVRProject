@@ -1320,6 +1320,7 @@ GameObject:
   - component: {fileID: 209558893854541844}
   - component: {fileID: 6017395270575581311}
   - component: {fileID: 6017395270575581310}
+  - component: {fileID: 3528277432691851750}
   m_Layer: 0
   m_Name: perso1
   m_TagString: Untagged
@@ -1334,8 +1335,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6864467473672227028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: -0.049999952, z: 1.5846238}
+  m_LocalRotation: {x: -0, y: 0.99996763, z: -0, w: 0.008047366}
+  m_LocalPosition: {x: 1.231522, y: -0.049999952, z: 2.0122933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1343,7 +1344,7 @@ Transform:
   - {fileID: 1754432070035895034}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.078, z: 0}
 --- !u!95 &209558893854541844
 Animator:
   serializedVersion: 5
@@ -1354,7 +1355,7 @@ Animator:
   m_GameObject: {fileID: 6864467473672227028}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7851c8dd771d2f94290972c935535a65, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9235b59f37facc44894eccfb23205b02, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1391,8 +1392,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7622682, y: 2.0023284, z: 1.4278979}
-  m_Center: {x: 0.058523357, y: 0.79066133, z: 0.21394897}
+  m_Size: {x: 1.6201855, y: 1.84353, z: 1.4278979}
+  m_Center: {x: -0.012517989, y: 0.8700605, z: 0.21394897}
+--- !u!114 &3528277432691851750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6864467473672227028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918c9bd32da8066468ffce40a2363931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gantdes: {fileID: 6864467473672227028}
 --- !u!1 &7013074705740076306
 GameObject:
   m_ObjectHideFlags: 0

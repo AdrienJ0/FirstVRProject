@@ -1767,6 +1767,7 @@ MonoBehaviour:
   scoreCanvas: {fileID: 4389668646815804502}
   timeOverPanel: {fileID: 9015703486748863021}
   endScorePanel: {fileID: 9015703486212619085}
+  punchingBall: {fileID: 1642386738}
 --- !u!1 &1474249477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,6 +1899,11 @@ Transform:
   m_Father: {fileID: 1313761371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1642386738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2769459383094025542, guid: fde0b123591a1294cb4f46d7bd49ea28, type: 3}
+  m_PrefabInstance: {fileID: 361765026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1946954330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,7 +2767,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4551190947072609426, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190947330655194, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948033102450, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948033102451, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948033102451, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948033102451, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 570
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948033102451, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 91.04
       objectReference: {fileID: 0}
     - target: {fileID: 4551190948196359625, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_text
@@ -2805,6 +2835,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4551190948436718010, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948436718010, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948436718010, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948436718010, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4551190948436718010, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
@@ -2855,13 +2897,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4551190948436718012, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4551190948436718013, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1318817471}
+    - target: {fileID: 4551190948436718013, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4551190948436718014, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_Name
       value: EndGameCanvasPunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948436718014, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4551190948490911627, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4551190948681489906, guid: 422305362315bc147b32aa145c5d1c9a, type: 3}
       propertyPath: m_Name

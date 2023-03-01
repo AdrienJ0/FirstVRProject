@@ -1737,7 +1737,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318817467}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc1e648099e161945aae023d8c3a4865, type: 3}
   m_Name: 
@@ -1762,6 +1762,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0484eaae286dd4f9a9b37bb03d32cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  balls:
+  - {fileID: 4031376715959380396, guid: 91eee3c438d789d4f9010b1159a5faf7, type: 3}
+  - {fileID: 1061904764991815004, guid: a5c31e5a30438bb45aa845e276f8bef8, type: 3}
+  hearts:
+  - {fileID: 251936342}
+  - {fileID: 621734182}
+  - {fileID: 150710987}
+  emptyHeart: {fileID: 21300000, guid: 53bf993a21b966844be70ac2c4c74631, type: 3}
   scoreCanvas: {fileID: 686275734}
   gameOverPanel: {fileID: 831114820}
   endScorePanel: {fileID: 1368874788}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
 
@@ -16,6 +16,8 @@ public class TimerScript : MonoBehaviour
     public GameObject scoreCanvas;
     public GameObject timeOverPanel;
     public GameObject endScorePanel;
+
+    public GameObject punchingBall;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +36,12 @@ public class TimerScript : MonoBehaviour
         }
         if(timeMax - time <= 0)
         {
+            Destroy(punchingBall);
             timerText.text = "0.00";
             ShowTimeOut();
             ShowEndScore();
+        
+            //RetourMainMenu();
         }
 
         
@@ -46,14 +51,21 @@ public class TimerScript : MonoBehaviour
     {
         scoreCanvas.SetActive(false);
         timeOverPanel.SetActive(true);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         //yield return new WaitForSeconds(2f);
     }
 
     void ShowEndScore()
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         timeOverPanel.SetActive(false);
         endScorePanel.SetActive(true);
     }
+
+    void RetourMainMenu()
+    {
+         SceneManager.LoadScene("UI");
+        
+    }
+
 }
