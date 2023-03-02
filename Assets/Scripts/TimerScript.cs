@@ -40,7 +40,7 @@ public class TimerScript : MonoBehaviour
             timerText.text = "0.00";
             ShowTimeOut();
             ShowEndScore();
-        
+            StartCoroutine(WaitAndLoadScene(10f));
             //RetourMainMenu();
         }
 
@@ -67,5 +67,9 @@ public class TimerScript : MonoBehaviour
          SceneManager.LoadScene("UI");
         
     }
-
+    IEnumerator WaitAndLoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        RetourMainMenu();
+    }
 }
