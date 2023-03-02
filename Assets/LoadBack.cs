@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadBack : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadSBack(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
