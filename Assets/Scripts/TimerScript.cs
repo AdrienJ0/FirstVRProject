@@ -8,7 +8,7 @@ public class TimerScript : MonoBehaviour
 {
 
     private float time;
-    private float timeMax = 30;
+    private float timeMax;
     public float TimerInterval;
     private float tick;
     [SerializeField] private TextMeshProUGUI timerText;
@@ -22,7 +22,8 @@ public class TimerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        time = (float)Time.time;
+        timeMax = (float) time + 30f;
     }
 
     // Update is called once per frame
