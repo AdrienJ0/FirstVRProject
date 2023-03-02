@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class BallSceneManager : MonoBehaviour
 {
@@ -33,6 +33,7 @@ public class BallSceneManager : MonoBehaviour
             ShowGameOver();
             //yield return new WaitForSeconds(2f);
             ShowEndScore();
+            StartCoroutine(WaitAndLoadScene(10f));
         }
     }
 
@@ -110,5 +111,15 @@ public class BallSceneManager : MonoBehaviour
             }
 
         }
+    }
+    void RetourMainMenu()
+    {
+        SceneManager.LoadScene("UI");
+
+    }
+    IEnumerator WaitAndLoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        RetourMainMenu();
     }
 }

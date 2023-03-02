@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PunchingBallScene.unity
-    guid: f4a10741f07458449b1db89a7d70cd00
-  - enabled: 1
     path: Assets/UI.unity
     guid: 14780e474e417524cbc91c2a05291a27
+  - enabled: 1
+    path: Assets/Scenes/PunchingBallScene.unity
+    guid: f4a10741f07458449b1db89a7d70cd00
   - enabled: 1
     path: Assets/BallScene.unity
     guid: 864b201293c0941418ac3d266cc7d128
