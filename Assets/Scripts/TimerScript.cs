@@ -24,6 +24,7 @@ public class TimerScript : MonoBehaviour
     {
         time = (float)Time.time;
         timeMax = (float) time + 30f;
+        PlayerInfos.setNbPoints(0);
     }
 
     // Update is called once per frame
